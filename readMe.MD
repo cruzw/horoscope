@@ -1,13 +1,16 @@
-// var horoscope = require('horoscope');
+```
+var horoscope = require('horoscope');
 
-// horoscope.getSign(7, 25);
+horoscope.getSign(7, 25);
 => Leo
 
-// horoscope.getSign(12, 21);
+horoscope.getSign(12, 21);
 => Sagittarius
 
-// horoscope.getSign(1, 18);
+horoscope.getSign(1, 18);
 => Capricorn
+```
+
 
 Zodiac Sign && Date Range:
 
