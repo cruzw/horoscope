@@ -1,3 +1,5 @@
+[npmjs.com/package/horoscope](https://www.npmjs.com/package/horoscope)
+
 ```
 var horoscope = require('horoscope');
 
