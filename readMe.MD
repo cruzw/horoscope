@@ -1,5 +1,7 @@
 [npmjs.com/package/horoscope](https://www.npmjs.com/package/horoscope)
 
+[github.com/gcwelborn/horoscope](https://github.com/gcwelborn/horoscope)
+
 ```
 var horoscope = require('horoscope');
 
@@ -15,7 +17,7 @@ horoscope.getSign(1, 18);
 
 
 Zodiac Sign && Date Range:
-
+```
 Aquarius - January 21 - February 19
 Pisces - February 20- March 20
 Aries - March 21 - April 20
@@ -28,3 +30,4 @@ Libra - September 24 - October 23
 Scorpio - October 24 - November 22
 Sagittarius - November 23 - December 22
 Capricorn - December 23 - January 20
+```

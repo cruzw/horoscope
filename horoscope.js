@@ -1,11 +1,9 @@
-//should see performance benefits:
 //    main if-else statement test for upper-lower months,
 //    then switch statement for discrete months,
 //    then if-else for range of days in particular month.
 
 exports.getSign = function (month, day) {
     'use strict';
-
     if (month <= 6) { //months: Jan, Feb, March, Apr, May, June
         switch (month) {
         case 1: //January
@@ -45,8 +43,6 @@ exports.getSign = function (month, day) {
                 return "Cancer";
             }
         }
-
-
     } else if (month > 6) { //months: July, Aug, Sept, Oct, Nov, Dec
         switch (month) {
         case 7: //July
@@ -88,19 +84,3 @@ exports.getSign = function (month, day) {
         }
     }
 };
-
-
-//Zodiac Sign && Date Range:
-
-//Aquarius - January 21 - February 19
-//Pisces - February 20- March 20
-//Aries - March 21 - April 20
-//Taurus - April 21 - May 21
-//Gemini - May 22 - June 21
-//Cancer - June 22 - July 22
-//Leo - July 23 -August 21
-//Virgo - August 22 - September 23
-//Libra - September 24 - October 23
-//Scorpio - October 24 - November 22
-//Sagittarius - November 23 - December 22
-//Capricorn - December 23 - January 20
