@@ -1,16 +1,16 @@
 {
-  "name": "horoscope",
-  "version": "0.0.1",
-  "description": "module to parse out astrological/zodiac signs from birth month and year",
-  "main": "horoscope.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
+    "name": "horoscope",
+    "version": "0.0.2",
+    "description": "module to parse out astrological/zodiac signs from birth month and year",
+    "main": "horoscope.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
     "zodiac",
     "astrological",
     "horoscope"
   ],
-  "author": "gcwelborn",
-  "license": "ISC"
+    "author": "gcwelborn",
+    "license": "ISC"
 }

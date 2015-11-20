@@ -1,1 +1,0 @@
-var demo = require('horoscope');
