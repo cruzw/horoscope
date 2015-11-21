@@ -36,6 +36,9 @@ var testArray = [
 
     ['Sagittarius', [11, 23]],
     ['Sagittarius', [12, 22]]
+
+  //  ['Not a bDay', [0, 0]],
+  //  ['Not a bDay', [1, -1]]
 ];
 
 console.time('test');

@@ -1,6 +1,6 @@
 {
     "name": "horoscope",
-    "version": "0.0.2",
+    "version": "0.1.1",
     "description": "module to parse out astrological/zodiac signs from birth month and year",
     "main": "horoscope.js",
     "scripts": {
