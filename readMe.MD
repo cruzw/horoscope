@@ -2,21 +2,34 @@
 
 [github.com/gcwelborn/horoscope](https://github.com/gcwelborn/horoscope)
 
+horoscope currently has two functions:
+
+1. parse astrological sign from birth month and birth day
 ```
 var horoscope = require('horoscope');
-
+```
+```
 horoscope.getSign(7, 25);
-=> Leo
+=> 'Leo'
 
 horoscope.getSign(12, 21);
-=> Sagittarius
+=> 'Sagittarius'
 
 horoscope.getSign(1, 18);
-=> Capricorn
+=> 'Capricorn'
+```
+
+2. parse zodiac sign from birth year
+```
+horoscope.getZodiac(1992);
+=> 'Monkey'
+
+horoscope.getZodiac(1953);
+=> 'Snake'
 ```
 
 
-Zodiac Sign && Date Range:
+Astrological Sign && Date Range:
 ```
 Aquarius - January 21 - February 19
 Pisces - February 20- March 20
@@ -30,4 +43,20 @@ Libra - September 24 - October 23
 Scorpio - October 24 - November 22
 Sagittarius - November 23 - December 22
 Capricorn - December 23 - January 20
+```
+
+Zodiac Sign && Date Range:
+```
+Rat: 2008, 1996, 1984, 1972, 1960
+Ox: 2009, 1997, 1985, 1973, 1961
+Tiger: 2010, 1998, 1986, 1974, 1962
+Rabbite: 2011, 1999, 1987, 1975, 1963
+Dragon: 2012, 2000, 1988, 1976, 1964
+Snake: 2013, 2001, 1989, 1977, 1965
+Horse: 2014, 2002, 1990, 1978, 1966
+Goat: 2015, 2003, 1991, 1979, 1967
+Monkey: 2016, 2004, 1992, 1980, 1968
+Rooster: 2017, 2005, 1993, 1981, 1969
+Dog: 2018, 2006, 1994, 1982, 1970
+Pig: 2019, 2007, 1995, 1983, 1971
 ```
