@@ -2,7 +2,7 @@
 
 [github.com/gcwelborn/horoscope](https://github.com/gcwelborn/horoscope)
 
-horoscope currently has two functions:
+#####horoscope currently has two functions:
 
 1. parse astrological sign from birth month and birth day
 ```
