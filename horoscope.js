@@ -16,7 +16,7 @@ exports.getSign = function (month, day) {
    } else if (month <= 6 && month > 0) { //months: Jan, Feb, March, Apr, May, June
       switch (month) {
       case 1: //January
-         if (day <= 20) {
+         if (day <= 19) {
             return "Capricorn";
          } else {
             return "Aquarius";
@@ -40,13 +40,13 @@ exports.getSign = function (month, day) {
             return "Taurus";
          }
       case 5: //May
-         if (day <= 21) {
+         if (day <= 20) {
             return "Taurus";
          } else {
             return "Gemini";
          }
       case 6: //June
-         if (day <= 21) {
+         if (day <= 20) {
             return "Gemini";
          } else {
             return "Cancer";
@@ -61,31 +61,31 @@ exports.getSign = function (month, day) {
             return "Leo";
          }
       case 8: //August
-         if (day <= 21) {
+         if (day <= 22) {
             return "Leo";
          } else {
             return "Virgo";
          }
       case 9: //September
-         if (day <= 23) {
+         if (day <= 22) {
             return "Virgo";
          } else {
             return "Libra";
          }
       case 10: //October
-         if (day <= 23) {
+         if (day <= 22) {
             return "Libra";
          } else {
             return "Scorpio";
          }
       case 11: //November
-         if (day <= 22) {
+         if (day <= 21) {
             return "Scorpio";
          } else {
             return "Sagittarius";
          }
       case 12: //December
-         if (day <= 22) {
+         if (day <= 21) {
             return "Sagittarius";
          } else {
             return "Capricorn";
@@ -99,6 +99,8 @@ exports.getSign = function (month, day) {
  * @param   {number} year birth year
  * @returns {string} Zodiac Animal
  */
+
+ // Should also account for day of chinese new year (since it changes but is in february)
 
 exports.getZodiac = function (year) {
    'use strict';
