@@ -11,9 +11,13 @@ exports.getSign = function (month, day) {
    'use strict';
    if (month < 1 || month > 12) {
       throw new Error("month needs to be between 1-12");
-   } else if (day < 1 || day > 31) {
+   }
+   if (day < 1 || day > 31) {
       throw new Error("check that day isn't zero, negative, or greater than 31");
-   } else if (month <= 6 && month > 0) { //months: Jan, Feb, March, Apr, May, June
+   }
+   
+   
+   if (month <= 6 && month > 0) { //months: Jan, Feb, March, Apr, May, June
       switch (month) {
       case 1: //January
          if (day <= 19) {
@@ -104,7 +108,7 @@ exports.getSign = function (month, day) {
 
 exports.getZodiac = function (year) {
    'use strict';
-   remainderAnimals = {
+   var remainderAnimals = {
       0: "Monkey",
       1: "Rooster",
       2: "Dog",

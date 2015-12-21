@@ -1,35 +1,34 @@
-[npmjs.com/package/horoscope](https://www.npmjs.com/package/horoscope)
+[npm module](https://www.npmjs.com/package/horoscope)
+[github link](https://github.com/gcwelborn/horoscope)
 
-[github.com/gcwelborn/horoscope](https://github.com/gcwelborn/horoscope)
+```
+$ npm install horoscope --save-dev
+# var horoscope = require('horoscope');
+```
 
-#####horoscope currently has two functions:
+#### horoscope currently has two functions:
 
 1. parse astrological sign from birth month and birth day
-```
-var horoscope = require('horoscope');
-```
-```
-horoscope.getSign(7, 25);
-=> 'Leo'
 
-horoscope.getSign(12, 21);
-=> 'Sagittarius'
-
-horoscope.getSign(1, 18);
-=> 'Capricorn'
+```
+# horoscope.getSign(7, 25);
+# 'Leo'
+# horoscope.getSign(12, 21);
+# 'Sagittarius'
+# horoscope.getSign(1, 18);
+# 'Capricorn'
 ```
 
 2. parse zodiac sign from birth year
+
 ```
-horoscope.getZodiac(1992);
-=> 'Monkey'
-
-horoscope.getZodiac(1953);
-=> 'Snake'
+# horoscope.getZodiac(1992);
+# 'Monkey'
+# horoscope.getZodiac(1953);
+# 'Snake'
 ```
 
-
-Astrological Sign && Date Range:
+Astrological Sign / Date Range:
 ```
 Aquarius - January 21 - February 19
 Pisces - February 20- March 20
@@ -45,7 +44,7 @@ Sagittarius - November 23 - December 22
 Capricorn - December 23 - January 20
 ```
 
-Zodiac Sign && Date Range:
+Zodiac Sign / Year Range:
 ```
 Rat: 2008, 1996, 1984, 1972, 1960
 Ox: 2009, 1997, 1985, 1973, 1961
