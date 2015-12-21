@@ -8,22 +8,25 @@ $ npm install horoscope --save-dev
 
 #### horoscope currently has two functions:
 
-1. parse astrological sign from birth month and birth day
+** parse astrological sign from birth month and birth day **
 
 ```
 # horoscope.getSign(7, 25);
 # 'Leo'
+
 # horoscope.getSign(12, 21);
 # 'Sagittarius'
+
 # horoscope.getSign(1, 18);
 # 'Capricorn'
 ```
 
-2. parse zodiac sign from birth year
+** parse zodiac sign from birth year **
 
 ```
 # horoscope.getZodiac(1992);
 # 'Monkey'
+
 # horoscope.getZodiac(1953);
 # 'Snake'
 ```
