@@ -1,8 +1,5 @@
-[npm module](https://www.npmjs.com/package/horoscope)
-[github link](https://github.com/gcwelborn/horoscope)
-
 ```
-$ npm install horoscope --save-dev
+$ npm install horoscope
 # var horoscope = require('horoscope');
 ```
 
@@ -11,23 +8,23 @@ $ npm install horoscope --save-dev
 ** parse astrological sign from birth month and birth day **
 
 ```
-# horoscope.getSign(7, 25);
+$ horoscope.getSign(7, 25);
 # 'Leo'
 
-# horoscope.getSign(12, 21);
+$ horoscope.getSign(12, 21);
 # 'Sagittarius'
 
-# horoscope.getSign(1, 18);
+$ horoscope.getSign(1, 18);
 # 'Capricorn'
 ```
 
 ** parse zodiac sign from birth year **
 
 ```
-# horoscope.getZodiac(1992);
+$ horoscope.getZodiac(1992);
 # 'Monkey'
 
-# horoscope.getZodiac(1953);
+$ horoscope.getZodiac(1953);
 # 'Snake'
 ```
 
