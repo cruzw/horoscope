@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/horoscope.svg)](https://badge.fury.io/js/horoscope)
+
 ```
 $ npm install horoscope
 # var horoscope = require('horoscope');
