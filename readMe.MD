@@ -1,14 +1,13 @@
-[![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/horoscope)
+[![npm version](https://badge.fury.io/js/horoscope.svg)](https://badge.fury.io/js/horoscope)
 [![Build Status](https://travis-ci.org/gcwelborn/horoscope.svg?branch=master)](https://travis-ci.org/gcwelborn/horoscope)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 [![NPM](https://nodei.co/npm/horoscope.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/horoscope/)
 
+Horoscope.js is a small javascript library for parsing astrological and zodiac signs from a birthdate.
 
-Horoscope.js is a small library for parsing astrological and zodiac signs from a birthdate.
 
 * first install and require it.
----
 ```javascript
 $ npm install horoscope
 
