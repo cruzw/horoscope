@@ -1,5 +1,8 @@
-[![npm version](https://badge.fury.io/js/horoscope.svg)](https://badge.fury.io/js/horoscope)
+[![npm version](https://badge.fury.io/js/horoscope@2x.png)](https://badge.fury.io/js/horoscope)
 [![Build Status](https://travis-ci.org/gcwelborn/horoscope.svg?branch=master)](https://travis-ci.org/gcwelborn/horoscope)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
+[![npm downloads](https://img.shields.io/npm/dm/horoscope.svg)](https://img.shields.io)
 
 [![NPM](https://nodei.co/npm/horoscope.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/horoscope/)
 
