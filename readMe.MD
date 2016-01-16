@@ -1,5 +1,8 @@
 [![npm version](https://badge.fury.io/js/horoscope.svg)](https://badge.fury.io/js/horoscope)
-![badge](https://travis-ci.org/gcwelborn/horoscope.svg?branch=master)
+[![Build Status](https://travis-ci.org/gcwelborn/horoscope.svg?branch=master)](https://travis-ci.org/gcwelborn/horoscope)
+
+[![NPM](https://nodei.co/npm/horoscope.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/horoscope/)
+
 ```javascript
 $ npm install horoscope
 # var horoscope = require('horoscope');
