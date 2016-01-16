@@ -1,9 +1,7 @@
 'use strict'
 let test = require('tape');
 let horoscope = require('./horoscope');
-
 ///////////////////////       getSign      ///////////////////////////
-
 let borderDates = {
 	"January": [
 		[19, 'Capricorn'],
@@ -54,7 +52,6 @@ let borderDates = {
 		[22, 'Capricorn']
 	]
 }
-
 let monthNums = {
 	"January": 1,
 	"February": 2,
@@ -69,27 +66,20 @@ let monthNums = {
 	"November": 11,
 	"December": 12,
 }
-
 for (let month in borderDates) {
-  console.log(month)
 	test('check ' + month, function(t) {
 		t.plan(2)
 		let monthNum = monthNums[month];
-
 		let firstTestSign = borderDates[month][0][1]
 		let firstTestDay = borderDates[month][0][0]
 		t.equal(horoscope.getSign(monthNum, firstTestDay), firstTestSign);
-
 		let secondTestSign = borderDates[month][1][1]
 		let secondTestDay = borderDates[month][1][0]
 		t.equal(horoscope.getSign(monthNum, secondTestDay), secondTestSign);
-
 		t.end();
 	})
 }
-
 ///////////////////////       getZodiac      ///////////////////////////
-
 let animalsToTest = {
 	'Rat': [1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020],
 	'Ox': [1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021],
@@ -104,7 +94,6 @@ let animalsToTest = {
 	'Dog': [1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030],
 	'Pig': [1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031],
 }
-
 for (let sign in animalsToTest) {
 	test('check ' + sign, function(t) {
 		t.plan(9)
