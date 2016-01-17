@@ -6,101 +6,38 @@
  * @param   {number} day   birth day
  * @returns {string} Astrological Sign
  */
-
-exports.getSign = function (month, day) {
+exports.getSign = (month, day) => {
   'use strict'
-  let sign
-  if (month < 1 || month > 12) throw new Error('month needs to be between 1-12')
-  if (day < 1 || day > 31) throw new Error('check that day is not zero, negative, or greater than 31')
-  let months = {
-    1: 'January',
-    2: 'February',
-    3: 'March',
-    4: 'April',
-    5: 'May',
-    6: 'June',
-    7: 'July',
-    8: 'August',
-    9: 'September',
-    10: 'October',
-    11: 'November',
-    12: 'December'
-  }
-  let monthFunctions = {
-    January: (day) => {
-      (day <= 19) ? sign = 'Capricorn' : sign = 'Aquarius'
-      return sign
-    },
-    February: (day) => {
-      (day <= 18) ? sign = 'Aquarius' : sign = 'Pisces'
-      return sign
-    },
-    March: (day) => {
-      (day <= 20) ? sign = 'Pisces' : sign = 'Aries'
-      return sign
-    },
-    April: (day) => {
-      (day <= 19) ? sign = 'Aries' : sign = 'Taurus'
-      return sign
-    },
-    May: (day) => {
-      (day <= 20) ? sign = 'Taurus' : sign = 'Gemini'
-      return sign
-    },
-    June: (day) => {
-      (day <= 20) ? sign = 'Gemini' : sign = 'Cancer'
-      return sign
-    },
-    July: (day) => {
-      (day <= 22) ? sign = 'Cancer' : sign = 'Leo'
-      return sign
-    },
-    August: (day) => {
-      (day <= 22) ? sign = 'Leo' : sign = 'Virgo'
-      return sign
-    },
-    September: (day) => {
-      (day <= 22) ? sign = 'Virgo' : sign = 'Libra'
-      return sign
-    },
-    October: (day) => {
-      (day <= 22) ? sign = 'Libra' : sign = 'Scorpio'
-      return sign
-    },
-    November: (day) => {
-      (day <= 21) ? sign = 'Scorpio' : sign = 'Sagittarius'
-      return sign
-    },
-    December: (day) => {
-      (day <= 21) ? sign = 'Sagittarius' : sign = 'Capricorn'
-      return sign
-    }
-  }
-		// End of MonthFunc
-  return monthFunctions[months[month]](day)
+  if (typeof month !== 'number' || typeof day !== 'number') throw new Error('HOROSCOPE.JS - getSign: month/day need to be numbers')
+  if (month < 1 || month > 12) throw new Error('HOROSCOPE.JS - getSign: month needs to be between greater than 1, less than 12')
+  if (day < 1 || day > 31) throw new Error('HOROSCOPE.JS - getSign: day cant be zero, negative, or greater than than 31')
+  let monthToSignFunctions = [ null,
+    (day) => (day <= 19) ? 'Capricorn' : 'Aquarius',
+    (day) => (day <= 18) ? 'Aquarius' : 'Pisces',
+    (day) => (day <= 20) ? 'Pisces' : 'Aries',
+    (day) => (day <= 19) ? 'Aries' : 'Taurus',
+    (day) => (day <= 20) ? 'Taurus' : 'Gemini',
+    (day) => (day <= 20) ? 'Gemini' : 'Cancer',
+    (day) => (day <= 22) ? 'Cancer' : 'Leo',
+    (day) => (day <= 22) ? 'Leo' : 'Virgo',
+    (day) => (day <= 22) ? 'Virgo' : 'Libra',
+    (day) => (day <= 22) ? 'Libra' : 'Scorpio',
+    (day) => (day <= 21) ? 'Scorpio' : 'Sagittarius',
+    (day) => (day <= 21) ? 'Sagittarius' : 'Capricorn'
+  ]
+  return monthToSignFunctions[month](day)
 }
 
 /**
  * Gets Zodiac sign from birth year
+ * @throws {Error} if year is not defined or it's length isn't four
  * @param {number} year birth year
  * @returns {string} Zodiac Animal
  */
-// Should also account for day of chinese new year (since it changes but is in february)
-
-exports.getZodiac = function (year) {
+exports.getZodiac = (year) => {
   'use strict'
-  return {
-    0: 'Monkey',
-    1: 'Rooster',
-    2: 'Dog',
-    3: 'Pig',
-    4: 'Rat',
-    5: 'Ox',
-    6: 'Tiger',
-    7: 'Rabbit',
-    8: 'Dragon',
-    9: 'Snake',
-    10: 'Horse',
-    11: 'Goat'
-  }[year % 12]
+  if (!year || typeof year !== 'number') throw new Error('HOROSCOPE.JS - getZodiac: year needs to be a number')
+  if (year.toString().length !== 4) throw new Error('HOROSCOPE.JS - getZodiac: year needs to be four digits long')
+  let ZodiacArray = [ 'Monkey', 'Rooster', 'Dog', 'Pig', 'Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat' ]
+  return ZodiacArray[year % 12]
 }
