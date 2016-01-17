@@ -23,7 +23,7 @@ let getSign = (month, day) => {
     day => (day <= 22) ? 'Virgo' : 'Libra',
     day => (day <= 22) ? 'Libra' : 'Scorpio',
     day => (day <= 21) ? 'Scorpio' : 'Sagittarius',
-  (da) => (day <= 21) ? 'Sagittarius' : 'Capricorn'
+    day => (day <= 21) ? 'Sagittarius' : 'Capricorn'
   ]
   return monthToSignFunctions[month](day)
 }
