@@ -7,14 +7,16 @@
 Horoscope.js is a small javascript library for parsing astrological and zodiac signs from a birthdate.
 
 
-* first install and require it.
+Install and require horoscope.
 ```javascript
-$ npm install horoscope
-
-let horoscope = require('horoscope');
+$ npm install [-g] horoscope
+// then
+const horoscope = require('horoscope');
+// or
+import { getSign, getZodiac, getPrediction } from 'horoscope'
 ```
 
-* parse astrological sign from birth month and birth day.
+Parse astrological sign from birth month and birth day.
 ```javascript
 console.log(horoscope.getSign(7, 25))
 // 'Leo'
@@ -23,11 +25,20 @@ console.log(horoscope.getSign(12, 21))
 // 'Sagittarius'
 ```
 
-* Parse zodiac sign from birth year.
+Parse zodiac sign from birth year.
 ```javascript
 console.log(horoscope.getZodiac(2015))
 // 'Goat'
 
 console.log(horoscope.getZodiac(2016))
 // 'Monkey'
+```
+
+Fetch zodiac prediction for the current day from horoscope.com
+```javascript
+console.log(horoscope.getPrediction('leo'))
+// "By nature you’re a master psychologist, Leo and you don't need to know someone well... "
+
+console.log(horoscope.getPrediction('cancer'))
+// "Too much exposure to books, newspapers, and computers today could produce eyestrain..."
 ```

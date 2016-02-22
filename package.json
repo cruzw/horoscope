@@ -1,14 +1,15 @@
 {
   "name": "horoscope",
-  "version": "0.2.2",
-  "description": "module to parse out astrological/zodiac signs from birth month and year",
+  "version": "0.3.0",
+  "description": "module to parse astrological/zodiac signs from birth month and year",
   "main": "horoscope.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gcwelborn/horoscope.git"
   },
   "scripts": {
-    "test": "node test.js | colortape"
+    "test": "node test.js | colortape",
+    "compile": "ccjs horoscopeDev.js > horoscope.js"
   },
   "keywords": [
     "zodiac",
@@ -16,7 +17,7 @@
     "horoscope"
   ],
   "author": "gcwelborn",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "devDependencies": {
     "colortape": "^0.1.1",
     "tape": "^4.4.0"

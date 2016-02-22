@@ -76,7 +76,6 @@ for (let month in borderDates) {
 		let secondTestSign = borderDates[month][1][1]
 		let secondTestDay = borderDates[month][1][0]
 		t.equal(horoscope.getSign(monthNum, secondTestDay), secondTestSign);
-		t.end();
 	})
 }
 ///////////////////////       getZodiac      ///////////////////////////
@@ -100,6 +99,18 @@ for (let sign in animalsToTest) {
 		animalsToTest[sign].forEach(function(year) {
 			t.equal(horoscope.getZodiac(year), sign);
 		})
-		t.end();
 	})
 }
+
+///////////////////////       getPrediction      ///////////////////////////
+test("getPredictions doesn't return an error or empty string", function(t) {
+	t.plan(36)
+	for (var key in animalsToTest) {
+		horoscope.getPrediction(key, function(err, prediction) {
+				t.equal(err, undefined)
+				t.equal(prediction.constructor, String)
+				t.notEqual(prediction.length, "")
+				// console.log(`${key} : ${prediction}`)
+		})
+	}
+})
