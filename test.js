@@ -1,7 +1,9 @@
 'use strict'
-let test = require('tape');
-let horoscope = require('./horoscope');
-///////////////////////       getSign      ///////////////////////////
+
+let test = require('tape')
+let horoscope = require('./horoscope')
+
+// data to test against
 let borderDates = {
 	"January": [
 		[19, 'Capricorn'],
@@ -52,6 +54,8 @@ let borderDates = {
 		[22, 'Capricorn']
 	]
 }
+
+// hard-coded array of months in number format for getSign testing
 let monthNums = {
 	"January": 1,
 	"February": 2,
@@ -66,19 +70,8 @@ let monthNums = {
 	"November": 11,
 	"December": 12,
 }
-for (let month in borderDates) {
-	test('check ' + month, function(t) {
-		t.plan(2)
-		let monthNum = monthNums[month];
-		let firstTestSign = borderDates[month][0][1]
-		let firstTestDay = borderDates[month][0][0]
-		t.equal(horoscope.getSign(monthNum, firstTestDay), firstTestSign);
-		let secondTestSign = borderDates[month][1][1]
-		let secondTestDay = borderDates[month][1][0]
-		t.equal(horoscope.getSign(monthNum, secondTestDay), secondTestSign);
-	})
-}
-///////////////////////       getZodiac      ///////////////////////////
+
+// hard-coded array of zodiac animal years for getZodiac testing
 let animalsToTest = {
 	'Rat': [1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020],
 	'Ox': [1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021],
@@ -93,24 +86,27 @@ let animalsToTest = {
 	'Dog': [1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030],
 	'Pig': [1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031],
 }
-for (let sign in animalsToTest) {
-	test('check ' + sign, function(t) {
-		t.plan(9)
-		animalsToTest[sign].forEach(function(year) {
-			t.equal(horoscope.getZodiac(year), sign);
-		})
+
+// getSign tests
+for (let month in borderDates) {
+	test('check ' + month, (newTest) => {
+		newTest.plan(2)
+		let monthNum = monthNums[month]
+		let firstTestSign = borderDates[month][0][1]
+		let firstTestDay = borderDates[month][0][0]
+		newTest.equal(horoscope.getSign(monthNum, firstTestDay), firstTestSign)
+		let secondTestSign = borderDates[month][1][1]
+		let secondTestDay = borderDates[month][1][0]
+		newTest.equal(horoscope.getSign(monthNum, secondTestDay), secondTestSign)
 	})
 }
 
-///////////////////////       getPrediction      ///////////////////////////
-test("getPredictions doesn't return an error or empty string", function(t) {
-	t.plan(36)
-	for (var key in animalsToTest) {
-		horoscope.getPrediction(key, function(err, prediction) {
-				t.equal(err, undefined)
-				t.equal(prediction.constructor, String)
-				t.notEqual(prediction.length, "")
-				// console.log(`${key} : ${prediction}`)
+// getZodiac tests
+for (let sign in animalsToTest) {
+	test('check ' + sign, newTest => {
+		newTest.plan(9)
+		animalsToTest[sign].forEach(year => {
+			newTest.equal(horoscope.getZodiac(year), sign);
 		})
-	}
-})
+	})
+}
