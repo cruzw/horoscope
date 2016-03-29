@@ -29,3 +29,21 @@ console.log(horoscope.getZodiac(2015))
 console.log(horoscope.getZodiac(2016))
 // 'Monkey'
 ```
+
+the last argument of both functions is optional, defaulting to false.
+if overrideErrors is set to true, horoscope methods will not throw error
+messages, just return null.
+```javascript
+
+console.log(horoscope.getSign(-7, 55))
+// Error!
+
+console.log(horoscope.getSign(-7, 55, true))
+// null
+
+console.log(horoscope.getZodiac('twenty-twenty'))
+// Error!
+
+console.log(horoscope.getZodiac('twenty-twenty', true))
+// null
+```

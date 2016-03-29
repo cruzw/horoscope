@@ -1,6 +1,6 @@
 {
   "name": "horoscope",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "module to parse astrological/zodiac signs from birth month and year",
   "main": "horoscope.js",
   "repository": {
@@ -8,8 +8,11 @@
     "url": "git+https://github.com/gcwelborn/horoscope.git"
   },
   "scripts": {
-    "test": "node test.js | tnyan",
-    "compile": "ccjs horoscopeDev.js > horoscope.js"
+    "test": "node test.js | faucet",
+    "coffeeCompile": "coffee --compile horoscopeDev.coffee ",
+    "closureCompile": "ccjs horoscopeDev.js > horoscope.js",
+    "full": "npm run coffeeCompile && npm run closureCompile && npm test",
+    "start": "coffee --watch --compile horoscopeDev.coffee "
   },
   "keywords": [
     "zodiac",
@@ -20,7 +23,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "ccjs": "^0.2.0",
-    "tap-nyan": "0.0.2",
+    "faucet": "0.0.1",
     "tape": "^4.4.0"
   },
   "dependencies": {}
