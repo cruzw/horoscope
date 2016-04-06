@@ -40,7 +40,7 @@
       }
     } else {
       if (birthdayIsntValid(month, day)) {
-        errorMessage = 'Horoscope.js/getSign(): month should be numbers 1-12 and days should be numbers between 1-31';
+        errorMessage = 'Horoscope.js/getSign(): month should be numbers 1-12 and days should be numbers between 1-31 depending on month length';
         throw new Error(errorMessage);
       } else {
         return handleMonths[month](day,month);
@@ -63,8 +63,23 @@
     12: monthHandler
   };
 
+ monthDayRange = {
+    1: 31,
+    2: 29,
+    3: 31,
+    4: 30,
+    5: 31,
+    6: 30,
+    7: 31,
+    8: 31,
+    9: 30,
+    10: 31,
+    11: 30,
+    12: 31
+  };
+
   birthdayIsntValid = function(m, d) {
-    if (typeof m !== 'number' || typeof d !== 'number' || m < 1 || m > 12 || d < 1 || d > 31) {
+    if (typeof m !== 'number' || typeof d !== 'number' || m < 1 || m > 12 || d < 1 || d > monthDayRange[m]) {
       return true;
     } else {
       return false;
