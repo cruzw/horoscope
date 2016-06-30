@@ -53,9 +53,9 @@ monthDayRange =
 # validate if month and day passed to getSign are valid
 birthdayIsntValid = (m, d) ->
 	if typeof m != 'number' || typeof d != 'number' || m < 1 || m > 12 || d < 1 || d > monthDayRange[m]
-		throw new Error('Please enter a valid date to reference')
 		return true
-	else return false
+	else
+		return false
 
 	# Gets Zodiac sign from birth year.
 	# @throws {Error} if year is not defined or it's length isn't four.

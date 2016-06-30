@@ -127,7 +127,6 @@
 
   birthdayIsntValid = function(m, d) {
     if (typeof m !== 'number' || typeof d !== 'number' || m < 1 || m > 12 || d < 1 || d > monthDayRange[m]) {
-      throw new Error('Please enter a valid date to reference');
       return true;
     } else {
       return false;
