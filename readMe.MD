@@ -10,6 +10,7 @@ install & require horoscope.
 $ npm install horoscope
 // then
 var horoscope = require('horoscope');
+// or
 import { getSign, getZodiac } from 'horoscope';
 ```
 
