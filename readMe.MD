@@ -3,13 +3,14 @@
 
 [![NPM](https://nodei.co/npm/horoscope.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/horoscope/)
 
-Horoscope.js is a small javascript library for parsing astrological and zodiac signs from a birth-date.
+Horoscope.js is a small yet performant node library for calculating astrological & zodiac signs from a birth-date.
 
-Install and require horoscope.
+install & require horoscope.
 ```javascript
-$ npm install [-g] horoscope
+$ npm install horoscope
 // then
 var horoscope = require('horoscope');
+import { getSign, getZodiac } from 'horoscope';
 ```
 
 return astrological sign from (birth month, birth day)
@@ -30,19 +31,18 @@ console.log(horoscope.getZodiac(2016))
 // 'Monkey'
 ```
 
-the last argument of both functions is optional, defaulting to false.
-if overrideErrors is set to true, horoscope methods will not throw error
-messages, just return null.
+the last argument of both functions, overrideErrors, is optional (defaulting to false).
+if set to true, horoscope methods will not throw error messages, but return null.
 ```javascript
 
 console.log(horoscope.getSign(-7, 55))
-// Error!
+// 'Horoscope.js/getSign(): month should be numbers 1-12 and days should be numbers between 1-31'
 
 console.log(horoscope.getSign(-7, 55, true))
 // null
 
 console.log(horoscope.getZodiac('twenty-twenty'))
-// Error!
+// 'Horoscope.js/getZodiac(): Year provided isn't valid'
 
 console.log(horoscope.getZodiac('twenty-twenty', true))
 // null

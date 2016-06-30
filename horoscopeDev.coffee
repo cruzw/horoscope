@@ -14,7 +14,7 @@ getSign = (month, day, overrideErrors = false) ->
 			return handleMonths[month](day)
 	else
 		if birthdayIsntValid(month, day)
-			errorMessage = 'Horoscope.js/getSign(): month should be numbers 1-12 and days should be numbers between 1-31'
+			errorMessage = "Horoscope.js/getSign(): month should be numbers 1-12 and days should be numbers between 1-31"
 			throw new Error(errorMessage)
 		else
 			return handleMonths[month](day)
@@ -54,7 +54,7 @@ getZodiac = (year, overrideErrors = false) ->
 			return ZodiacArray[year % 12]
 	else
 		if yearIsntValid(year)
-			errorMessage = 'Year isnt valid'
+			errorMessage = "Horoscope.js/getZodiac(): Year provided isn't valid"
 			throw new Error(errorMessage)
 		else
 			return ZodiacArray[year % 12]
