@@ -34,9 +34,26 @@ handleMonths =
 	11: (day) -> if day <= 21 then return 'Scorpio' else return 'Sagittarius'
 	12: (day) -> if day <= 21 then return 'Sagittarius' else return 'Capricorn'
 
+
+#object containing valid date ranges for months
+monthDayRange =
+	1: 31
+	2: 29
+	3: 31
+	4: 30
+	5: 31
+	6: 30
+	7: 31
+	8: 31
+	9: 30
+	10: 31
+	11: 30
+	12: 31
+
 # validate if month and day passed to getSign are valid
 birthdayIsntValid = (m, d) ->
-	if typeof m != 'number' || typeof d != 'number' || m < 1 || m > 12 || d < 1 || d > 31
+	if typeof m != 'number' || typeof d != 'number' || m < 1 || m > 12 || d < 1 || d > monthDayRange[m]
+		throw new Error('Please enter a valid date to reference')
 		return true
 	else return false
 
@@ -66,7 +83,8 @@ ZodiacArray = ['Monkey', 'Rooster', 'Dog', 'Pig', 'Rat', 'Ox', 'Tiger', 'Rabbit'
 yearIsntValid = (year) ->
 	if !year || typeof year != 'number' || year.toString().length != 4
 		return true
-	else return false
+	else
+		return false
 
 module.exports.getSign = getSign
 module.exports.getZodiac = getZodiac
