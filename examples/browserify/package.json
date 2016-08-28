@@ -1,0 +1,22 @@
+{
+  "name": "browserify-horoscope-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browserify": "browserify index.js -o bundle.js -t [ babelify --presets [ es2015 ] ]"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "horoscope": "^2.0.1"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0"
+  }
+}
