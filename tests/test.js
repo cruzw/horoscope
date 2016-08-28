@@ -1,7 +1,8 @@
-'use strict'
+var getSign = require('./../lib/index').getSign;
+var getZodiac = require('./../lib/index').getZodiac;
 
-let test = require('tape')
-let horoscope = require('./horoscope.js')
+// const horoscope = require('./../lib/index');
+const test = require('tape');
 
 // data to test against
 let borderDates = {
@@ -94,10 +95,10 @@ for (let month in borderDates) {
 		let monthNum = monthNums[month]
 		let firstTestSign = borderDates[month][0][1]
 		let firstTestDay = borderDates[month][0][0]
-		newTest.equal(horoscope.getSign(monthNum, firstTestDay), firstTestSign)
+		newTest.equal(getSign({month: monthNum, day: firstTestDay}), firstTestSign)
 		let secondTestSign = borderDates[month][1][1]
 		let secondTestDay = borderDates[month][1][0]
-		newTest.equal(horoscope.getSign(monthNum, secondTestDay), secondTestSign)
+		newTest.equal(getSign({month: monthNum, day: secondTestDay}), secondTestSign)
 	})
 }
 
@@ -106,7 +107,7 @@ for (let sign in animalsToTest) {
 	test('check 9 years of zodiac: ' + sign, newTest => {
 		newTest.plan(9)
 		animalsToTest[sign].forEach(year => {
-			let zodiacAnimal = horoscope.getZodiac(year)
+			let zodiacAnimal = getZodiac(year)
 			newTest.equal(zodiacAnimal, sign);
 		})
 	})
