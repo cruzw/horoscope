@@ -1,6 +1,6 @@
 {
   "name": "horoscope",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "module to parse astrological/zodiac signs from birth month and year",
   "main": "horoscope.js",
   "repository": {
@@ -8,11 +8,10 @@
     "url": "git+https://github.com/gcwelborn/horoscope.git"
   },
   "scripts": {
-    "test": "node test.js | faucet",
-    "coffeeCompile": "coffee --compile horoscopeDev.coffee ",
-    "closureCompile": "ccjs horoscopeDev.js > horoscope.js",
-    "full": "npm run coffeeCompile && npm run closureCompile && npm test",
-    "start": "coffee --watch --compile horoscopeDev.coffee "
+    "test": "node tests/test.js | faucet",
+    "build": "babel src -d lib",
+    "lint": "eslint src",
+    "closureCompile": "ccjs horoscopeDev.js > horoscope.js"
   },
   "keywords": [
     "zodiac",
@@ -22,9 +21,19 @@
   "author": "gcwelborn",
   "license": "UNLICENSED",
   "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-lodash": "^3.2.8",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
     "ccjs": "^0.2.0",
+    "eslint": "^3.4.0",
     "faucet": "0.0.1",
     "tape": "^4.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.15.0"
+  }
 }

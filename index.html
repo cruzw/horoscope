@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Horoscope</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" type="text/css">
+
+		<style>
+			body {
+				display: flex;
+				flex:1;
+				min-height: 100vh;
+				min-width: 100%;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			.container {
+				display: flex;
+				flex: 1;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 20px 0;
+			}
+			.example {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				max-width: 300px;
+			}
+
+			.example input {
+				padding: 10px;
+				margin: 10px;
+				max-width: 80px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+			<h1>Horoscope.js</h1>
+			<pre style="margin-top: 0"><code>npm install horoscope</code></pre>
+			<!-- <p>♈️ ♉️ ♊️ ♋️ ♌️ ♍️ ♎️ ♏️ ♐️ ♑️ ♒️ ♓️ </p> -->
+			<div style="display:flex; justify-content: space-between; width: 220px;">
+				<a class="button" href="https://github.com/gcwelborn/horoscope"  target="_blank" rel="noopener noreferrer">
+					Docs
+				</a>
+				<a class="button" href="https://www.npmjs.com/package/horoscope" target="_blank" rel="noopener noreferrer">
+					NPM
+				</a>
+			</div>
+			<br>
+			<br>
+
+			<span>Try Me!</span>
+			<div class="example">
+				<input type="number" id="month" name="month" value="07">
+				<input type="number" id="day" name="day" value="25">
+				<input type="number" id="year" name="year" value="1992">
+			</div>
+
+			<div style="display:flex; flex-direction:column;text-align:center">
+				<div style="display:flex; justify-content: space-around; width: 220px; font-size: 18px">
+						<span id="horoscope"></span><span id="zodiac"></span>
+				</div>
+				<span style="font-style: italics; font-size: 12px;">processed in <span id="speed"></span> milliseconds</span>
+				<span style="padding-top:50px;">made with 💙 &nbsp;by <a style="color: #333" href="http://cruzwelborn.com" target="_blank" rel="noopener noreferrer">Cruz Welborn</a></span>
+			</div>
+		</div>
+		<script src="examples/webpack/build/main.min.js" charset="utf-8"></script>
+	</body>
+</html>
