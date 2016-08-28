@@ -1,8 +1,8 @@
 {
   "name": "horoscope",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "module to parse astrological/zodiac signs from birth month and year",
-  "main": "horoscope.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gcwelborn/horoscope.git"
