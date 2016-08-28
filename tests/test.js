@@ -1,5 +1,6 @@
-var getSign = require('./../lib/index').getSign;
-var getZodiac = require('./../lib/index').getZodiac;
+'use strict'
+const getSign = require('./../lib/index').getSign;
+const getZodiac = require('./../lib/index').getZodiac;
 
 // const horoscope = require('./../lib/index');
 const test = require('tape');
